@@ -149,7 +149,7 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "gourav-portfolio-main/assets/")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "gourav-portfolio-main/static/")
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "gourav-portfolio-main", 'media')
 
