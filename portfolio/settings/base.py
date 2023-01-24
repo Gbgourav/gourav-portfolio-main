@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
+# See https://docs.djangoproject.com/BASE_DIRen/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
@@ -46,7 +46,7 @@ DB_HOST = config("DB_HOST")
 DB_PORT = config("DB_PORT")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*']
 
@@ -146,17 +146,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "gourav-portfolio-main/static/")
-
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "gourav-portfolio-main", 'media')
 
+# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "gourav-portfolio-main/static/")
 STATICSITEMAPS_ROOT_DIR = os.path.join(os.path.dirname(BASE_DIR), "gourav-portfolio-main/static/")
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
