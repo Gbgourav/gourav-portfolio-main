@@ -20,7 +20,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = False
 enable_otp = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*', '.vercel.app', '.now.sh']
 
 EMAIL_HOST_USER = config("EMAIL_HOST_USER")
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
