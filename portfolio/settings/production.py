@@ -27,12 +27,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 
-EMAIL_HOST_USER = config("EMAIL_HOST_USER")
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_PORT = 587
-EMAIL_HOST_PASSWORD = 'fbqgvpefaetotrhl'
-EMAIL_USE_TLS = True
-EMAIL_HOST = config("EMAIL_HOST")
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '48abeab7bbfde5'
+EMAIL_HOST_PASSWORD = 'c72a0e93bc8736'
+EMAIL_PORT = '2525'
 
 AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")

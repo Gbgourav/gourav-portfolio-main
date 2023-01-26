@@ -60,8 +60,12 @@ class Contact(View):
             submitButton = request.POST.get('submit')
             context['submitButton'] = submitButton
             subject = "you got an notification from " + data.name
-            send_mail(subject, "Name: " + data.name + "\n" + "Email: "
-                      + data.email + "\n" + "Message: " + data.message, data.email, ['gbgourav123@gmail.com'])
+            send_mail(subject,
+                      "Name: " + data.name + "\n" + "Email: " + data.email + "Message: " + data.message,
+                      data.email,
+                      ['gbgourav123@gmail.com'],
+                      fail_silently=False)
+
             return render(request, 'contact.html', context=context)
 
         return render(request, 'contact.html', context=context)
