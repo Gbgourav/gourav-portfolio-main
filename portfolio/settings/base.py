@@ -13,13 +13,10 @@ from pathlib import Path
 import os
 from decouple import config
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -49,7 +46,6 @@ DB_PORT = config("DB_PORT")
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*']
-
 
 # Application definition
 
@@ -93,7 +89,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -107,7 +102,6 @@ DATABASES = {
         'PORT': DB_PORT,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -127,7 +121,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -139,16 +132,14 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
-MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
+# MEDIA_URL = '/media/'
+# STATIC_URL = '/static/'
+
+
 STATIC_URL = '/static/'
-
-
-
-
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), "templates"]
