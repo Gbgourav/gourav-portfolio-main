@@ -61,7 +61,7 @@ class Contact(View):
             context['submitButton'] = submitButton
             subject = "you got an notification from " + data.name
             send_mail(subject, "Name: " + data.name + "\n" + "Email: "
-                      + data.email + "\n" + "Message: " + data.message, data.email, ['exiall750@gmail.com'])
+                      + data.email + "\n" + "Message: " + data.message, data.email, ['gbgourav123@gmail.com'])
             return render(request, 'contact.html', context=context)
 
         return render(request, 'contact.html', context=context)
@@ -83,12 +83,12 @@ class Achievement(View):
         return render(request, 'achievement.html', context=context)
 
 
-class CsBrideProgram(View):
-    def get(self, request, *args, **kwargs):
-        get_updated_details()
-        csBridge = CsBrideProgramm.objects.all()
-        context['csBridge'] = csBridge
-        return render(request, 'csBridgeProgram.html', context=context)
+# class CsBrideProgram(View):
+#     def get(self, request, *args, **kwargs):
+#         get_updated_details()
+#         csBridge = CsBrideProgramm.objects.all()
+#         context['csBridge'] = csBridge
+#         return render(request, 'csBridgeProgram.html', context=context)
 
 
 class Project(View):
