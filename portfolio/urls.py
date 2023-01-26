@@ -19,9 +19,9 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path, include
 
-admin.site.site_header = "Shounak"
-admin.site.site_title = "Shounak admin"
-admin.site.index_title = "Welcome to Shounak's Portfolio"
+admin.site.site_header = "Gourav"
+admin.site.site_title = "Gourav Admin"
+admin.site.index_title = "Welcome to Gourav's Portfolio"
 handler404 = 'home.views.page_not_found_view'
 
 urlpatterns = [
