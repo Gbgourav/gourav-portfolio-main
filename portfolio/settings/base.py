@@ -137,7 +137,7 @@ USE_TZ = True
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
-# MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
 # STATIC_URL = '/static/'
 
 
