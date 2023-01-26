@@ -46,7 +46,7 @@ DB_HOST = config("DB_HOST")
 DB_PORT = config("DB_PORT")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = ['https://1-web-production.up.railway.app/']
 
