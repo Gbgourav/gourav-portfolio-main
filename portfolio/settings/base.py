@@ -46,7 +46,10 @@ DB_HOST = config("DB_HOST")
 DB_PORT = config("DB_PORT")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+if not DEBUG:
+    CSRF_TRUSTED_ORIGINS = ['https://1-web-production.up.railway.app/']
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*']
 
@@ -138,8 +141,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-CSRF_TRUSTED_ORIGINS = ['https://1-web-production.up.railway.app/']
 
 
 
